@@ -1,0 +1,74 @@
+body {
+background: radial-gradient(circle at top, #0b0c10 0%, #1f2833 80%);
+color: #f5f5f5;
+font-family: 'Roboto', sans-serif;
+min-height: 100vh;
+}
+h1, h2, h3, h4 {
+font-family: 'Cinzel', serif;
+color: #c5a46d;
+letter-spacing: 1px;
+text-shadow: 0 0 10px rgba(197, 164, 109, 0.3);
+}
+.navbar {
+background-color: rgba(11, 12, 16, 0.9);
+border-bottom: 1px solid #c5a46d;
+box-shadow: 0 4px 10px rgba(0,0,0,0.8);
+}
+.navbar-brand {
+font-family: 'Cinzel', serif;
+color: #c5a46d !important;
+font-size: 1.5rem;
+}
+
+.card {
+background: linear-gradient(145deg, #1f2833 0%, #0b0c10 100%);
+border: 1px solid #c5a46d;
+border-radius: 12px;
+box-shadow: 0 0 15px rgba(197, 164, 109, 0.2);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+transform: scale(1.05);
+box-shadow: 0 0 30px rgba(102, 252, 241, 0.3);
+}
+.card img {
+border-radius: 12px 12px 0 0;
+}
+.btn-got {
+background: linear-gradient(90deg, #c5a46d 0%, #a87c3a 100%);
+color: #0b0c10;
+border: none;
+font-weight: bold;
+transition: all 0.3s ease;
+}
+.btn-got:hover {
+background: linear-gradient(90deg, #66fcf1 0%, #45a29e 100%);
+color: #0b0c10;
+box-shadow: 0 0 20px rgba(102, 252, 241, 0.6);
+}
+.footer {
+text-align: center;
+padding: 20px;
+color: #aaa;
+font-size: 0.9rem;
+border-top: 1px solid #c5a46d33;
+margin-top: 40px;
+}
+/* Animación de entrada */
+.fade-in {
+animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(15px); }
+to { opacity: 1; transform: translateY(0); }
+}
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+width: 8px;
+}
+::-webkit-scrollbar-thumb {
+background: #c5a46d;
+border-radius: 4px;
+}

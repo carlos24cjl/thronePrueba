@@ -1,0 +1,23 @@
+<div class="container d-flex justify-content-center align-items-center" style="min-height:100vh; position: relative;">
+  <button class="btn-volver" routerLink="/personajes">← Volver</button>
+  
+  @if (personaje.id > 0) {
+    <div class="card card-horizontal">
+      <div class="card-img-container">
+        <img [src]="personaje.imageUrl" class="card-img-left" [alt]="personaje.fullName" />
+      </div>
+      <div class="card-body info">
+        <h5 class="card-title text-center">{{ personaje.fullName }}</h5>
+        <p class="card-text title">{{ personaje.title || 'Sin título' }}</p>
+        <p class="card-text family"><strong [ngStyle]="getFamilyColors(personaje.family)">{{ personaje.family }}</strong></p>
+        <p class="card-text debug-info">ID: {{ personaje.id }}</p>
+        <p class="card-text debug-info">Nombre: {{ personaje.firstName }} {{ personaje.lastName }}</p>
+      </div>
+    </div>
+  } @else {
+    <div class="text-white text-center">
+      <p>Cargando personaje...</p>
+      <p class="small">ID solicitado: {{ personaje.id }}</p>
+    </div>
+  }
+</div>

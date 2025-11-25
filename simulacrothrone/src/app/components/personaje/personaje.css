@@ -1,0 +1,111 @@
+.container {
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding: 20px;
+position: relative;
+}
+
+.btn-volver {
+position: absolute;
+top: 20px;
+left: 20px;
+background: linear-gradient(90deg, #c5a46d 0%, #a87c3a 100%);
+color: #0b0c10;
+border: none;
+font-weight: bold;
+font-size: 1rem;
+padding: 10px 20px;
+border-radius: 8px;
+cursor: pointer;
+transition: all 0.3s ease;
+z-index: 10;
+}
+
+.btn-volver:hover {
+background: linear-gradient(90deg, #e7e7e7 0%, #aeaeae 100%);
+box-shadow: 0 0 15px rgba(239, 239, 239, 0.6);
+transform: translateX(-3px);
+}
+
+/* ==== Tarjeta Horizontal GOT ==== */
+.card-horizontal {
+display: flex;
+flex-direction: row;
+background: linear-gradient(145deg, #1f2833 0%, #0b0c10 100%);
+border: 1px solid #c5a46d;
+border-radius: 12px;
+box-shadow: 0 0 15px rgba(197, 164, 109, 0.2);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+width: 90%;
+max-width: 900px;
+max-height: 500px;
+overflow: hidden;
+}
+.card-horizontal:hover {
+transform: scale(1.02);
+box-shadow: 0 0 35px rgba(102, 252, 241, 0.4);
+}
+/* ==== Imagen izquierda ==== */
+.card-img-container {
+width: 40%;
+min-width: 200px;
+overflow: hidden;
+background-color: #111;
+}
+
+.card-img-left {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+/* ==== Contenido ==== */
+.card-body {
+padding: 25px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 60%;
+}
+.card-title {
+font-family: 'Cinzel', serif;
+color: #c5a46d;
+font-size: 2rem;
+line-height: 1.2;
+margin-bottom: 1rem;
+}
+.title {
+font-size: 1.2rem;
+color: #ddd;
+margin-bottom: 1rem;
+text-align: center;
+}
+.family{
+font-size: 1.5rem;
+padding: 10px;
+text-align: center;
+}
+.debug-info {
+font-size: 0.9rem;
+color: #aaa;
+margin: 0.3rem 0;
+text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+.card-horizontal {
+flex-direction: column;
+max-height: none;
+}
+.card-img-container {
+width: 100%;
+height: 300px;
+}
+.card-body {
+width: 100%;
+}
+}
